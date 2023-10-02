@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "~1.4.1",
+    "next": "latest",
+    "opvious": "^0.10.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@opvious/eslint-plugin": "^0.1.26",
+    "@opvious/prettier-typescript": "^0.1.26",
+    "@types/node": "^18.8.5",
+    "@types/react": "18.2.24",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

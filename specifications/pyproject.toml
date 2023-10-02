@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "opvious_web_integration_example"
+version = "0.1.0"
+description = ""
+authors = []
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+opvious = {extras = ["aio", "cli"], version = "^0.17.1"}
+python = ">=3.9,<3.12"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^23.3.0"}
+flake8 = "^4.0"
+jupyter = "^1.0.0"
+mypy = "^1.2.0"
+poethepoet = "^0.19.0"
+pytest = "~7.1.2"
+pytest-asyncio = "^0.20.2"
+
+[tool.black]
+line-length = 79
+include = '\.py$'
+
+[tool.poe.tasks]
+  [tool.poe.tasks.test]
+    cmd = "pytest"
+
+  [tool.poe.tasks.lint-style]
+    cmd = "black . --check"
+
+  [tool.poe.tasks.lint-check]
+    cmd = "flake8"
+
+  [tool.poe.tasks.lint-types]
+    cmd = "mypy ."
+
+  [tool.poe.tasks.lint]
+    sequence = ["lint-style", "lint-check", "lint-types"]
+
+  [tool.poe.tasks.format]
+    cmd = "black ."
+
+  [tool.poe.tasks.jupyter]
+    cmd = "jupyter notebook notebooks"
+
+  [tool.poe.tasks.register]
+    cmd = "python -m opvious register-notebook notebooks/sudoku.ipynb"
+
+[tool.pytest.ini_options]
+log_level = "DEBUG"
+addopts = "-p no:importnb"

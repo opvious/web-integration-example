@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+    "module": "node16",
+    "moduleResolution": "node16",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2019",
+    "incremental": true,
+    "allowJs": true,
+    "tsBuildInfoFile": "out/.tsbuildinfo"
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
