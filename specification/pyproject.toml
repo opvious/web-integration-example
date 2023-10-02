@@ -48,7 +48,7 @@ include = '\.py$'
     cmd = "jupyter notebook notebooks"
 
   [tool.poe.tasks.register]
-    cmd = "python -m opvious register-notebook notebooks/sudoku.ipynb"
+    cmd = "python -m opvious register-notebook notebooks/model.ipynb sudoku"
 
 [tool.pytest.ini_options]
 log_level = "DEBUG"

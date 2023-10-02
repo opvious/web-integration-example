@@ -26,7 +26,7 @@ export default function Home() {
       .finally(() => void setSolving(false));
 
     async function run() {
-      const res = await fetch('/api/fix-grid', {
+      const res = await fetch('/api/solve', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({grid: parseGridInput(input)}),
