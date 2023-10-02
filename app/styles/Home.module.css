@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 95vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -38,55 +38,37 @@
   font-size: 1.5rem;
 }
 
-.grid {
-  display: flex;
+.grids {
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
+  display: flex;
+  margin-top: 5em;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+textarea.grid {
+  font-size: 3em;
+  letter-spacing: 0.5em;
+  resize: none;
+  padding: 1em;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.gridActions {
+  padding: 1em;
+  font-size: 1.25em;
+  width: 250px;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.gridActions p {
+  bottom: 0;
+  font-size: 0.8em;
+  width: 100%;
+  text-align: center;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.gridActions button {
+  font-size: 1em;
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+  padding: 0.5em 0;
 }

@@ -31,7 +31,7 @@ export default async function FixGridHandler(
 
   res.status(200).json({
     grid: gridFromTensor(output.variables),
-    mistakeCount: outcome.objectiveValue,
+    mistakeCount: Math.round(outcome.objectiveValue),
   });
 }
 
